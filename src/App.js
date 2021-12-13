@@ -10,15 +10,17 @@ import './App.css';
 import Details from './components/Details';
 import Header from './components/Header';
 import Home from './components/Home';
+import Login from './components/Login';
 
 function App() {
   return (
     <div className="App">
       <Router>
-      <Header />
+        <Header />
         <Routes>
-          <Route path="/detail" element={<Details/>}></Route>
-          <Route path="/" element={<Home/>}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/detail" element={<Details />}></Route>
+          <Route path="/" element={<Home />}></Route>
         </Routes>
       </Router>
 
