@@ -7,23 +7,24 @@ import db from "../Firebase";
 
 
 
-function Home(){
+function Home() {
 
-    useEffect(()=>{
+    useEffect(() => {
+
         db.collection("movies").onSnapshot((snapshot)=>{
             let tempMovies = snapshot.docs.map((doc)=>{
                 console.log(doc.data());
                 return {id:doc.id, ...doc.data()}
             })
-            
+           
         })
-    },[])
+    }, [])
 
-    return(
+    return (
         <Container>
-            <ImgSlider/>
-            <Viewers/>
-            <Movies/>
+            <ImgSlider />
+            <Viewers />
+            <Movies />
         </Container>
     )
 }

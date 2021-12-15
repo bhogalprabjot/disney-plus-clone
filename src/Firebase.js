@@ -1,13 +1,23 @@
-import firebase from "firebase/compat";
+  import firebase from "firebase/compat";
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyA9BnlX96fMf7XiUVCFRsoQzG8DGERJkeY",
+//   authDomain: "disneyplus-clone-a33d5.firebaseapp.com",
+//   projectId: "disneyplus-clone-a33d5",
+//   storageBucket: "disneyplus-clone-a33d5.appspot.com",
+//   messagingSenderId: "37918794208",
+//   appId: "1:37918794208:web:dbe9842dfe1dda522a4b85",
+//   measurementId: "G-DRVLJKWRWG",
+// };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA9BnlX96fMf7XiUVCFRsoQzG8DGERJkeY",
-  authDomain: "disneyplus-clone-a33d5.firebaseapp.com",
-  projectId: "disneyplus-clone-a33d5",
-  storageBucket: "disneyplus-clone-a33d5.appspot.com",
-  messagingSenderId: "37918794208",
-  appId: "1:37918794208:web:dbe9842dfe1dda522a4b85",
-  measurementId: "G-DRVLJKWRWG",
+  apiKey: "AIzaSyA6ehw4ykzUF_cVgTobRGH5y89p_SsKMjc",
+  authDomain: "clone-disney-plus-prabjot.firebaseapp.com",
+  projectId: "clone-disney-plus-prabjot",
+  storageBucket: "clone-disney-plus-prabjot.appspot.com",
+  messagingSenderId: "414489595627",
+  appId: "1:414489595627:web:7ef804ae77b2d089b5f8ae",
+  measurementId: "G-P11EMXC0XE"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
