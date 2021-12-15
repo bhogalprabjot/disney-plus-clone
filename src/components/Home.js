@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import ImgSlider from "./ImgSlider";
 import Movies from "./Movies";
 import Viewers from "./Viewers";
+import db from "../Firebase";
+
+
 
 function Home(){
+
+    useEffect(()=>{
+        db.collection("movies").onSnapshot((snapshot)=>{
+            let tempMovies = snapshot.docs.map((doc)=>{
+                console.log(doc.data());
+                return {id:doc.id, ...doc.data()}
+            })
+            
+        })
+    },[])
+
     return(
         <Container>
             <ImgSlider/>
             <Viewers/>
-            <Movies/>`1`
+            <Movies/>
         </Container>
     )
 }

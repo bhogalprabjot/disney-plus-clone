@@ -19,7 +19,7 @@ function Details() {
                     <span>TRAILER</span>
                 </TrailerButton>
                 <AddButton>
-                    <span>+</span>
+                    <span> + </span>
                 </AddButton>
                 <GroupWatchButton>
                     <img src="/images/group-icon.png"/>
@@ -114,6 +114,7 @@ const AddButton = styled.div`
     span{
         font-size:30px;
         color: white;
+        
     }
 `
 const GroupWatchButton = styled(AddButton)`
