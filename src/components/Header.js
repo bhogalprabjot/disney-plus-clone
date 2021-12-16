@@ -22,7 +22,7 @@ function Header() {
                     email: user.email,
                     photo: user.photoURL
                 }))
-                navigate("/")
+                navigate("/home")
             }
         })
     }, [])
@@ -37,7 +37,7 @@ function Header() {
                     email: user.email,
                     photo: user.photoURL
                 }))
-                navigate("/")
+                navigate("/home")
             })
     }
 
@@ -45,7 +45,7 @@ function Header() {
         auth.signOut()
             .then(() => {
                 dispatch(setSignOut());
-                navigate("/login");
+                navigate("/");
             })
     }
 

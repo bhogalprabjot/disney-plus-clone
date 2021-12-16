@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 
+
 import './App.css';
 import Details from './components/Details';
 import Header from './components/Header';
@@ -18,9 +19,9 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/login" element={<Login />}></Route>
           <Route path="/detail/:id" element={<Details />}></Route>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/" element={<Login />}></Route>
         </Routes>
       </Router>
 
