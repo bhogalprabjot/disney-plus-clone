@@ -1,2 +1,2 @@
 ## Disney+ Clone
-Deployed: (https://clone-disney-plus-prabjot.web.app)
+Deployed: https://clone-disney-plus-prabjot.web.app
