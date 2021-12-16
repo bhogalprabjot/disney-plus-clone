@@ -1,42 +1,103 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { auth, provider } from "../Firebase"
 import styled from 'styled-components'
+import { selectUserName, setUserLogin, setSignOut, selectUserPhoto } from '../features/user/userSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from "react-router-dom"
+
+
 function Header() {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const userName = useSelector(selectUserName);
+    const userPhoto = useSelector(selectUserPhoto);
+
+    useEffect(() => {
+        auth.onAuthStateChanged(async (user) => {
+            if (user) {
+                dispatch(setUserLogin({
+                    name: user.displayName,
+                    email: user.email,
+                    photo: user.photoURL
+                }))
+                navigate("/")
+            }
+        })
+    }, [])
+
+    const signIn = () => {
+        auth.signInWithPopup(provider)
+            .then((result) => {
+                // console.log(result);
+                let user = result.user;
+                dispatch(setUserLogin({
+                    name: user.displayName,
+                    email: user.email,
+                    photo: user.photoURL
+                }))
+                navigate("/")
+            })
+    }
+
+    const signOut = () => {
+        auth.signOut()
+            .then(() => {
+                dispatch(setSignOut());
+                navigate("/login");
+            })
+    }
+
     return (
         <Nav>
             <Logo src="images/logo.svg" />
-            <NavMenu>
-                <a>
-                    <img src="images/home-icon.svg" />
-                    <span>HOME</span>
+            {
+                !userName ?
+                    (
+                        <LoginContainer>
+                            <Login onClick={signIn}>Login</Login>
+                        </LoginContainer>
 
-                </a>
-                <a>
-                    <img src="images/search-icon.svg" />
-                    <span>SEARCH</span>
+                    ) :
+                    <>
+                        <NavMenu>
+                            <a>
+                                <img src="images/home-icon.svg" alt="" />
+                                <span>HOME</span>
 
-                </a>
-                <a>
-                    <img src="images/watchlist-icon.svg" />
-                    <span>WATCHLIST</span>
+                            </a>
+                            <a>
+                                <img src="images/search-icon.svg" alt="" />
+                                <span>SEARCH</span>
 
-                </a>
-                <a>
-                    <img src="images/original-icon.svg" />
-                    <span>ORIGINALS</span>
+                            </a>
+                            <a>
+                                <img src="images/watchlist-icon.svg" alt="" />
+                                <span>WATCHLIST</span>
 
-                </a>
-                <a>
-                    <img src="images/movie-icon.svg" />
-                    <span>MOVIES</span>
+                            </a>
+                            <a>
+                                <img src="images/original-icon.svg" alt="" />
+                                <span>ORIGINALS</span>
 
-                </a>
-                <a>
-                    <img src="images/series-icon.svg" />
-                    <span>SERIES</span>
+                            </a>
+                            <a>
+                                <img src="images/movie-icon.svg" alt="" />
+                                <span>MOVIES</span>
 
-                </a>
-            </NavMenu>
-            <UserImg src="images/user-dummy.jpg" />
+                            </a>
+                            <a>
+                                <img src="images/series-icon.svg" alt="" />
+                                <span>SERIES</span>
+
+                            </a>
+                        </NavMenu>
+                        <UserImg onClick={signOut} src={userPhoto} />
+                    </>
+
+            }
+
         </Nav>
     )
 }
@@ -110,3 +171,26 @@ const UserImg = styled.img`
     
 `
 
+const Login = styled.div`
+    border: 1px solid #f9f9f9;
+    padding: 8px 16px;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,0.6);
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+
+    &:hover{
+    background-color: #f9f9f9;
+    color:#000;
+    border-color:transparent;
+        
+    }
+`
+
+const LoginContainer = styled.div`
+    flex:1;
+    display:flex;
+    justify-content: flex-end;
+`
