@@ -4,7 +4,7 @@
         "titleImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/mickey-l.png?alt=media&token=ea5d47be-2e9c-45b0-a90c-ce0f18acd159",
         "backgroundImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/mickey-d.jpeg?alt=media&token=6eda5552-c825-4934-9c92-b1cf6cceebac",
         "description": "Mickey entertains preschoolers by inviting them to join him and his friends for a date at the Clubhouse. Using early math learning and problem solving skills, he leads kids on an interactive adventure of learning and fun.",
-        "type": "new",
+        "type": "trending",
         "subTitle": "2006 - 2013 • 5 Seasons • Kids, Animation",
         "cardImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/mickey-t.jpeg?alt=media&token=c26876a8-9193-418b-af19-9cddac5c038a",
         "title": "Mickey Mouse"
@@ -41,7 +41,7 @@
     },
     {
         "id": "9SoYHkDtRfSD77N8GD5S",
-        "type": "new",
+        "type": "original",
         "titleImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/burrow-l.png?alt=media&token=68bbe924-3c6d-4a5c-b3f6-d308820c1b28",
         "title": "Burrow",
         "subTitle": "2020 • 6m • Family, Animation",
@@ -61,7 +61,7 @@
     },
     {
         "id": "MUvKgcPjCtyeE2Y006m7",
-        "type": "new",
+        "type": "original",
         "titleImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/soul-l.png?alt=media&token=b88de18a-8089-4557-9275-b76fb59e48ab",
         "description": "Jamie Foxx leads an all-star cast in this hilarious, heart-filled adventure. Pixar’s \"Soul\" introduces Joe, who lands the gig of his life at the best jazz club in town. But one misstep lands Joe in a fantastical place: The Great Before. There, he teams up with soul 22 (Tina Fey), and together they find the answers to some of life’s biggest questions.",
         "cardImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/soul-t.jpeg?alt=media&token=5ebfc4c3-08de-4b00-abdc-8b8e4764fe83",
@@ -133,7 +133,7 @@
         "id": "wloyaC5dDGoDPuyll3qT",
         "cardImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/legends-t.jpeg?alt=media&token=a1f7af9e-4fdd-4efa-8f7b-fc6337a4ef56",
         "titleImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/legends-l.png?alt=media&token=4b0028ef-3a5e-47c4-90b6-4d3c12fe8338",
-        "type": "new",
+        "type": "original",
         "subTitle": "2021 • 1 Season • Science Fiction, Fantasy, Action-Adventure",
         "backgroundImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/legends-d.jpeg?alt=media&token=32534116-e16f-452a-81fb-21d453ea7f37",
         "description": "Marvel Studios LEGENDS traces Wanda Maximoff’s evolution from an adversary of The Avengers to a powerful ally, and highlights one special relationship destined to shape her future in unexpected ways…",
@@ -154,7 +154,7 @@
         "description": "ASSEMBLED is an immersive series of documentary-style specials examining the creation of Marvel Studios’ thrilling new shows and theatrical releases.",
         "titleImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/assembeled-l.png?alt=media&token=25b5897d-9a35-4dd1-a43f-01d309e32fb7",
         "cardImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/assembled-t.jpeg?alt=media&token=48b56559-512a-4367-b8a5-2218b360f0e4",
-        "type": "new",
+        "type": "original",
         "subTitle": "2021 • 1 Season • Docuseries, Anthology",
         "backgroundImg": "https://firebasestorage.googleapis.com/v0/b/clone-disney-plus-prabjot.appspot.com/o/assembled-d.jpeg?alt=media&token=efb80c98-ad99-48bd-9bc6-e0d8452c9f11",
         "title": "Assembled"

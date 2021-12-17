@@ -62,10 +62,9 @@ function Header() {
                     ) :
                     <>
                         <NavMenu>
-                            <a>
+                            <a href="/home">
                                 <img src="images/home-icon.svg" alt="" />
                                 <span>HOME</span>
-
                             </a>
                             <a>
                                 <img src="images/search-icon.svg" alt="" />
@@ -122,6 +121,7 @@ const NavMenu = styled.div`
     align-items:center;
 
     a {
+        text-decoration: none;
         display:flex;
         align-items: center;
         padding: 0 12px;
@@ -132,9 +132,12 @@ const NavMenu = styled.div`
         }
 
         span{
+            color: rgb(249, 249, 249);
             font-size:13px;
             letter-spacing:1.42px;
             position: relative;
+            padding: 2px 0px;
+            white-space: nowrap;
 
             &:after{
                 content:"";
